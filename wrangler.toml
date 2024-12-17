@@ -1,0 +1,20 @@
+name = "rick-and-morty-catalog"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+publish = "build"
+
+[build.environment]
+NODE_VERSION = "18.19.0"
+
+[[kv_namespaces]]
+binding = "SEARCH_CACHE"
+id = "267a6c7359624ca29602ecdf9e031443"
+preview_id = "fb645db7dde0468992f8553522ca2809"
+
+[env.production]
+KV_CACHE_TTL = "3600"
+
+[env.preview]
+KV_CACHE_TTL = "60"
